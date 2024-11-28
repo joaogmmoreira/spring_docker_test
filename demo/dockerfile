@@ -1,0 +1,24 @@
+# Use an official Maven image with JDK 17 to build the project
+FROM maven:3.8.4-openjdk-17 AS build
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the pom.xml and source code to the container
+COPY pom.xml .
+COPY src ./src
+
+# Build the project
+RUN mvn clean package
+
+# Use an official OpenJDK runtime as a parent image
+FROM openjdk:17-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the JAR file from the build stage to the container
+COPY --from=build /app/target/*.jar app.jar
+
+# Run the JAR file
+ENTRYPOINT ["java", "-jar", "app.jar"]

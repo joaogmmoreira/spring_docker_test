@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "spring.datasource.dbuser",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.dbuser'"
+  },
+  {
+    "name": "spring.datasource.dbhost",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.dbhost'"
+  },
+  {
+    "name": "spring.datasource.dbname",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.dbname'"
+  },
+  {
+    "name": "spring.datasource.dbpassword",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.dbpassword'"
+  },
+  {
+    "name": "spring.datasource.dbport",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.dbport'"
+  }
+]}
